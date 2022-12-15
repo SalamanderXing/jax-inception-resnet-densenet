@@ -1,0 +1,83 @@
+{
+    "my_project": {
+        "name": "my_project",
+        "project": {
+            "models": {
+                "googlenet": {
+                    "name": "googlenet",
+                    "exports": [
+                        "GoogleNet"
+                    ],
+                    "errors": []
+                },
+                "resnet": {
+                    "name": "resnet",
+                    "exports": [
+                        "ResNet"
+                    ],
+                    "errors": []
+                },
+                "densenet": {
+                    "name": "densenet",
+                    "exports": [
+                        "DenseNet"
+                    ],
+                    "errors": []
+                }
+            },
+            "data_loaders": {
+                "cifar10": {
+                    "name": "cifar10",
+                    "exports": [
+                        "get_data"
+                    ],
+                    "errors": []
+                }
+            },
+            "trainers": {
+                "classification_trainer": {
+                    "name": "classification_trainer",
+                    "exports": [
+                        "TrainerModule"
+                    ],
+                    "errors": []
+                }
+            },
+            "experiments": {
+                "densenet": {
+                    "name": "densenet",
+                    "errors": [],
+                    "imports": [
+                        "trainers",
+                        "models",
+                        "data_loaders"
+                    ]
+                },
+                "resnet": {
+                    "name": "resnet",
+                    "errors": [],
+                    "imports": [
+                        "trainers",
+                        "models",
+                        "data_loaders"
+                    ]
+                },
+                "dummy": {
+                    "name": "dummy",
+                    "errors": [],
+                    "imports": []
+                },
+                "googlenet": {
+                    "name": "googlenet",
+                    "errors": [],
+                    "imports": [
+                        "trainers",
+                        "models",
+                        "data_loaders"
+                    ]
+                }
+            }
+        },
+        "root": "/my_project"
+    }
+}
