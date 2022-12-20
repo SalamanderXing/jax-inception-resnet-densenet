@@ -13,6 +13,7 @@ model = ResNet(num_classes=10, act_fn=nn.relu)
 if mate.is_train:
     val_result = TrainerModule.train_classifier(
         model=model,
+        save_path=mate.save_dir,
         optimizer_name="adamw",
         optimizer_hparams={"lr": 1e-3, "weight_decay": 1e-4},
         exmp_imgs=jax.device_put(next(iter(train_loader))[0]),
@@ -25,6 +26,7 @@ if mate.is_train:
 elif mate.is_test:
     test_result = TrainerModule.test_classifier(
         model=model,
+        save_path=mate.save_dir,
         optimizer_name="adamw",
         optimizer_hparams={"lr": 1e-3, "weight_decay": 1e-4},
         exmp_imgs=jax.device_put(next(iter(train_loader))[0]),
