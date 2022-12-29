@@ -8,7 +8,7 @@ class ResNet(nn.Module):
     num_classes: int
     act_fn: callable
     block_class: nn.Module = ResNetBlock
-    num_blocks: tuple = (3, 3, 3)
+    num_blocks: tuple = (2, 2)
     c_hidden: tuple = (16, 32, 64)
 
     @nn.compact

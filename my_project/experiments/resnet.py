@@ -6,7 +6,7 @@ from flax import linen as nn
 import jax
 
 train_loader, val_loader, test_loader = get_data(
-    dataset_path="data", train_batch_size=64, test_batch_size=128
+    dataset_path="data", train_batch_size=2, test_batch_size=2
 )
 model = ResNet(num_classes=10, act_fn=nn.relu)
 
@@ -20,6 +20,7 @@ if mate.is_train:
         checkpoint_path=mate.checkpoint_path,
         train_loader=train_loader,
         val_loader=val_loader,
+        save_path=mate.save_dir,
     )
     mate.result({"val_acc": val_result})
 elif mate.is_test:
@@ -30,5 +31,6 @@ elif mate.is_test:
         exmp_imgs=jax.device_put(next(iter(train_loader))[0]),
         checkpoint_path=mate.checkpoint_path,
         test_loader=test_loader,
+        save_path=mate.save_dir,
     )
     mate.result({"test_acc": test_result})

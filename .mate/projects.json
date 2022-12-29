@@ -8,21 +8,43 @@
                     "exports": [
                         "GoogleNet"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.3"
+                        ],
+                        [
+                            "jax",
+                            "0.4.1"
+                        ]
+                    ]
                 },
                 "resnet": {
                     "name": "resnet",
                     "exports": [
                         "ResNet"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.3"
+                        ]
+                    ]
                 },
                 "densenet": {
                     "name": "densenet",
                     "exports": [
                         "DenseNet"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.3"
+                        ]
+                    ]
                 }
             },
             "data_loaders": {
@@ -31,7 +53,21 @@
                     "exports": [
                         "get_data"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "numpy",
+                            "1.24.1"
+                        ],
+                        [
+                            "torch",
+                            "1.13.1"
+                        ],
+                        [
+                            "torchvision",
+                            "0.14.1"
+                        ]
+                    ]
                 }
             },
             "trainers": {
@@ -40,7 +76,33 @@
                     "exports": [
                         "TrainerModule"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.3"
+                        ],
+                        [
+                            "jax",
+                            "0.4.1"
+                        ],
+                        [
+                            "numpy",
+                            "1.24.1"
+                        ],
+                        [
+                            "optax",
+                            "0.1.4"
+                        ],
+                        [
+                            "torch",
+                            "1.13.1"
+                        ],
+                        [
+                            "tqdm",
+                            "4.64.1"
+                        ]
+                    ]
                 }
             },
             "experiments": {

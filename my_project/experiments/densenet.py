@@ -6,7 +6,7 @@ from flax import linen as nn
 import jax
 
 train_loader, val_loader, test_loader = get_data(
-    dataset_path="data", train_batch_size=64, test_batch_size=128
+    dataset_path="data", train_batch_size=8, test_batch_size=32
 )
 model = ResNet(num_classes=10, act_fn=nn.relu)
 

@@ -1,0 +1,6 @@
+data/
+*/venv/.mate/tmp_mate_install
+*/venv/
+.mate/tmp_mate_install/
+results/
+.mate/tmp

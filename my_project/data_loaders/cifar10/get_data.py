@@ -3,8 +3,9 @@ import torch
 from torchvision import transforms
 from torchvision.datasets import CIFAR10
 from torch.utils import data
+import nargsort
 
-
+print(nargsort)
 def get_data(*,train_batch_size: int, test_batch_size: int, dataset_path: str):
 
     train_dataset = CIFAR10(root=dataset_path, train=True, download=True)
